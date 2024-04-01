@@ -5,7 +5,7 @@ import { expectedData, firstCallData, secondCallData, thirdCallData } from './ut
 import fs from 'fs';
 
 beforeAll(() => {
-    fs.rmSync('./tests/output.json');
+    fs.rmSync('./tests/output.json', { force: true });
 });
 describe('Writing to file test', () => {
     afterEach(() => {
